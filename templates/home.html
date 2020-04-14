@@ -1,0 +1,21 @@
+<h1>WELCOME TO WORD COUNT</h1>
+
+<h3>Please enter any text that you would like decifered below!</h3>
+
+<!--The above will be seen on the webpage as words formatted by the type of 
+h1, h2, etc. used. The belo will give the user a box to enter their words into
+and also will give them basically a button to run the program-->
+
+
+<form action="{% url 'count' %}"> <!--This {% url 'count' %} is the 'action' taken from
+#the input in this section (pressing the count button)-->
+    <textarea cols="61" rows="15" name="fulltext"></textarea>
+    <br /> 
+    Press the "Count!" button when ready!   
+    <input type="submit" value="Count!"></input>
+</form>
+
+<form action="{% url 'secret' %}">
+    <input type="submit" value="Click here to go to a secret location"></input>
+</form>
+

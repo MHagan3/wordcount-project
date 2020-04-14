@@ -1,0 +1,23 @@
+<h1>YOUR COUNT IS:</h1>
+<h2>{{ count }} words!</h2>
+
+<h2>Your text:</h2>
+{{ fulltext }}
+
+<br />
+<br />
+<br />
+
+{% for word, number in sortedlist %}
+{{ word }}: {{ number }}
+<br />
+{% endfor %}
+
+<form action="{% url 'home' %}">
+    <br />
+    <br />
+    <input type="submit" value="TAKE ME BACK TO THE HOMEPAGE"></input>
+</form>
+
+<a href="{% url 'about' %}">About</a>
+
